@@ -28,6 +28,6 @@ def main():
         print(rez[i][0],rez[i][1])
   
   
-    
+     
 if __name__ == "__main__":
     main()
