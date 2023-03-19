@@ -30,7 +30,7 @@ def main():
     
    ## if not(10**5>= n >=1):
        ## raise ValueError("n 
-
+ 
     
 if __name__ == "__main__":
     main()
