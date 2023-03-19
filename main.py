@@ -7,7 +7,7 @@ def parallel_processing(n, m, data):
     thread= n*[0]
     
     for i in range(m):
-        nexth=0
+        nextth=0
         for x in range(1,n):
                 if thread[nextth] > thread[x]:
                     nextth=x
@@ -24,9 +24,9 @@ def main():
     n,m=map(int,input().split())
     data=list(map(int,input().split()))
     
-    result = parallel_processing(n,m,data)
+    rez = parallel_processing(n,m,data)
     for i in range(m):
-        print(result[i][0],result[i][1])
+        print(rez[i][0],rez[i][1])
   
   
     
