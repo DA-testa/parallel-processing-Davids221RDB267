@@ -7,16 +7,16 @@ def parallel_processing(n, m, data):
     thread= n*[0]
     
     for i in range(m):
-        next=0
+        nexth=0
         for x in range(1,n):
-                if thread[next] > thread[x]:
-                    next=x
+                if thread[nextth] > thread[x]:
+                    nextth=x
                     
-        pirmais=thread[next]
+        pirmais=thread[nextth]
         pedejais=pirmais+data[i]
-        thread[next]=pedejais
+        thread[nextth]=pedejais
         
-        output.append((next,pirmais))
+        output.append((nextth,pirmais))
         
     return output
 
@@ -27,9 +27,7 @@ def main():
     result = parallel_processing(n,m,data)
     for i in range(m):
         print(result[i][0],result[i][1])
-    
-   ## if not(10**5>= n >=1):
-       ## raise ValueError("n 
+  
   
     
 if __name__ == "__main__":
