@@ -26,7 +26,7 @@ def main():
     rez = parallel_processing(n,m,data)
     for i in range(m):
         print(rez[i][0],rez[i][1])
-  
+ 
   
      
 if __name__ == "__main__":
