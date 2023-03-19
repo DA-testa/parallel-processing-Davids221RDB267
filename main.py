@@ -23,7 +23,6 @@ def parallel_processing(n, m, data):
 def main():
     n,m=map(int,input().split())
     data=list(map(int,input().split()))
-    
     rez = parallel_processing(n,m,data)
     for i in range(m):
         print(rez[i][0],rez[i][1])
