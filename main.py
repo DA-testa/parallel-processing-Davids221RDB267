@@ -4,28 +4,33 @@ def parallel_processing(n, m, data):
     output = []
     # TODO: write the function for simulating parallel tasks, 
     # create the output pairs
-
+    thread= n*[0]
+    
+    for i in range(m):
+        next=0
+        for x in range(1,n):
+                if thread[next] > thread[x]:
+                    next=x
+                    
+        pirmais=thread[next]
+        pedejais=pirmais+data[i]
+        thread[next]=pedejais
+        
+        output.append((next,pirmais))
+        
     return output
 
 def main():
-    # TODO: create input from keyboard
-    # input consists of two lines
-    # first line - n and m
-    # n - thread count 
-    # m - job count
-    n = 0
-    m = 0
-
-    # second line - data 
-    # data - contains m integers t(i) - the times in seconds it takes any thread to process i-th job
-    data = []
-
-    # TODO: create the function
-    result = parallel_processing(n,m,data)
+    n,m=map(int,input().split())
+    data=list(map(int,input().split()))
     
-    # TODO: print out the results, each pair in it's own line
+    result = parallel_processing(n,m,data)
+    for i in range(m):
+        print(result[i][0],result[i][1])
+    
+   ## if not(10**5>= n >=1):
+       ## raise ValueError("n s
 
-
-
+  
 if __name__ == "__main__":
     main()
